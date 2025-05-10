@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RBSE 12th Result 2024</title>
+    <style>
+        body {
+            background-color: #fce5b3;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .form-section, .result-section {
+            display: none;
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .result-img {
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: red;">Please enter your roll-number</h2>
+        <input type="text" id="rollInput" placeholder="Enter Roll Number" />
+        <br/>
+        <button onclick="showResult()">Submit</button>
+        <button onclick="resetForm()">Reset</button>
+
+        <div class="result-section" id="resultSection">
+            <img src="result.png" alt="Result Image" class="result-img"/>
+        </div>
+    </div>
+
+    <script>
+        function showResult() {
+            var roll = document.getElementById("rollInput").value;
+            if (roll === "2746987") {
+                document.getElementById("resultSection").style.display = "block";
+            } else {
+                alert("Invalid Roll Number. Try 2746987");
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("rollInput").value = "";
+            document.getElementById("resultSection").style.display = "none";
+        }
+    </script>
+</body>
+</html>
